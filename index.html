@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To My Portifolio Website</title>
+
+    <link href="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./index.js"></script>
+</head>
+
+<body class="scroll-container">
+    <div>
+
+    <nav>
+        <!-- nav style="padding-bottom: 5px; border-bottom: 1px solid #ccc" -->
+        <!-- #767973; "background: linear-gradient(90deg, rgba(118,121,115,1) 45%, rgba(162,161,161,1) 100%)" -->
+        <div class="dimg">
+            <img src="./images/M01.jpg" style="border-radius: 50%;" width="50px" height="50px">
+            <p style="font-weight: 400; padding-left: 20px;"><a>Agende uma Call</a></p>
+        </div>
+        <div class="menu">
+            <hr>
+                <p id="a1"><a>Home &nbsp</a></p>
+                <p><a href="#pg-2">Portifolio &nbsp</a></p>
+                <p><a href="#pg-3">Services &nbsp</a></p>
+                <p><a href="#pg-4">Tools I Use</a></p>
+                <p><a href="#pg-5">Contact</a></p>
+        </div>
+    </nav>
+
+    <section id="pg-1" class="hidden">
+        <div class="firstpg">
+            <p style="margin-bottom: -30px;">Oi, sou o Felipe &#9995;</p>
+            <h2 style="margin-bottom: 3px;">Desenvolvedor de websites<br> & automações de controle financeiro.</h2>
+            <p>Agilizo os processos da sua empresa de forma segura e sem erros.</p>
+            <p>Transformo o controle financeiro do seu negócio em um sistema</p>
+            <p>intuitivo e adaptado para sua realidade.</p>
+            <p style="margin: 30px;"></p>
+
+            <div class="toggle">
+                <input type="radio" name="toggle" value="View my work" class="view" id="view"/>
+                <label for="view" style="font-size: 1rem; color: black; font-family: Poppins;">Meus trabalhos</label>
+                    <span class="slider"></span>
+        
+                <input type="radio" name="toggle" value="More about me" class="more" id="more"/>
+                <label for="more" style="font-size: 1.2rem;">Mais sobre mim</label>
+        
+                <div class="seletor">&nbsp;</div>
+            </div>
+        </div>
+    </section>
+
+    <hr style="width: 70vw;">
+
+    <!-- P R O J E T O S -->
+    <section id="pg-2" class="hidden proj">
+            <p style="font-size: 2.3rem; margin-top: 74px; margin-bottom: -27px; font-family: Poppins;">Projetos</p>
+            <p style="font-size: 3rem; padding: 0 0 20px 40px; margin-bottom: 15px;">O que posso fazer por você & SEU NEGÓCIO.</p>
+            <div class="grid-container">
+                <img src="./images/Despesas project2024.png" alt="" class="i-bg">
+                <img src="./images/CWK Project.png" alt="" class="i-bg">
+                <img src="./images/appdoc card2.png" class="i-bg">
+                <img src="" alt="">
+            </div>
+    </section>
+
+    <section id="pg-3" class="hidden">
+        <p style="font-size: 3rem">Espaço para <br> + imagens de projetos</p>
+        <!-- <p style="font-size: 3rem">Eu não desapareço <br> após o término do trabalho.</p> -->
+    </section>
+
+    <!-- T O O L S   I   U S E -->
+    <section id="pg-4" class="hidden" style="margin-left: 10vw;">
+            <p class="logo" style="font-size: 2.3rem; margin-bottom: 60px;">Ferramentas Que Utilizo</p>
+
+            <div class="logos">
+                <!-- style="font-family: Poppins; font-weight: 200" -->
+                <p class="logo hidden">Nodejs &nbsp<img src="./images/nodejs-icon.png" height="75"/> </p>
+                <!-- <p class="logo hidden">Nodejs &nbsp <img src="images/button/signin.png" height="35"/> -->
+                <p class="logo hidden">Javascript &nbsp<img src="./images/javascript-icon.png" height="75"/></p>
+                <p class="logo hidden">Materialize &nbsp<img src="./images/w-file-format-document.png" height="75"/></p>
+
+                <p class="logo hidden">Tailwind &nbsp<img src="./images/tailwindcss-icon.png" height="75"/></p>
+                <p class="logo hidden">Apps Script &nbsp<img class="svg" src="./appsscript-icon.svg"/></p>
+                <p class="logo hidden">Google Sheets</p>
+                <!--<p class="logo hidden">Apps Script</p> -->
+            </div>
+    </section>
+    
+    <hr style="width: 80vw;">
+
+    <!-- C O N T A T O -->
+    <section id="pg-5" class="hidden" style="display: flex; column-gap: 200px;">
+        <div>
+            <h2 style="letter-spacing: 0.2rem;">Você está a 3 passos de <br>ter um novo website..</h2>
+            <button style="font-size: 1.2rem; width: 300px; height: 40px;">Simulação de orçamento</button>
+        </div>
+
+    </section>
+</div>
+
+    <footer style="font-size: 1.6rem;">
+        <!-- text-decoration-line: overline; -->
+         <!-- .line { border-bottom: 1px solid #888; } -->
+        <div style=" height: 230px; background-color: rgb(30, 29, 29);">
+            <hr>
+            <div style="display: flex; justify-content: space-around; padding: 10px;">
+                <div>
+                    <p style="color: rgb(34, 133, 199); margin-bottom: -1rem;">Londrina</p>
+                    <p>Paraná</p>
+                </div>
+                <div>
+                    <p style="color: rgb(34, 133, 199); margin-bottom: -1rem;">Termos & Condições</p>
+                    <p>2025</p>
+                </div>
+                <!-- <p>Termos & Condições <br> 2025</p> -->
+                 <div>
+                    <img style="margin-top: 2rem;" src="./images/linkedin-white.png" height="45">
+                    <button style="background: none; border: none;"><img src="./images/github-white.png" height="45"></button>
+                 </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+
+</html>

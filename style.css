@@ -1,0 +1,312 @@
+body{
+    background-color: #131316;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    z-index: 200;
+}
+
+#a1 {
+    scroll-margin-bottom: 0;
+}
+
+nav{
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    background-color: rgb(28, 26, 26);
+    top: 0;
+    left: 0;
+    z-index: 7;
+    border-bottom: 1px solid #ffffff;
+}
+
+@media (min-width: 1130px) {
+    .menu{
+        left: 60vw;
+    }
+    .logos{
+        font-size: 3rem;
+    }
+    .proj{
+        border-radius: 3%;
+    }
+    
+}
+
+@media (min-width:885px) and (max-width: 1129px) {
+    .menu{
+        left: 48vw;
+    }
+    .logos{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 884px) {
+    .menu{
+        left: 36vw;
+        font-size: 0.9rem;
+    }
+    .dimg{
+        p{
+            font-size: 0.8rem;
+        }
+    }
+    .logos{
+        font-size: 1.6rem;
+    }
+    .proj{
+        border-radius: 18px;
+    }
+    
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    position: absolute;
+    height: 64px;
+    font-family: Poppins;
+    font-weight: 300;
+    color: rgb(235, 238, 240);
+    z-index: 3;
+    
+  flex-wrap: wrap;
+  column-gap: 1.1em;
+
+    p{
+    margin: 18px 0;
+    z-index: 5;
+    }
+
+    p > a:hover{
+        border-bottom: solid #4c4c64;
+        cursor: pointer;
+        letter-spacing: 1px;
+    }
+}
+
+.menu--alt{
+    opacity: 0.7;
+/*    background-color: rgb(54, 48, 48); */
+}
+
+.dimg{
+    top: 12px;
+    display: flex;
+/*    flex-direction: row-reverse; */
+    align-items: center;
+    padding-left: 7vw;
+    p{
+        font-family: Poppins;
+        margin: 18px 0;
+        z-index: 5;
+        }
+    p > a:hover{
+            border-bottom: solid #4c4c64;
+            cursor: pointer;
+            letter-spacing: 1px;
+    }
+}
+
+.scroll-container{
+    width: 100vw;
+    height: 400vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* H O M E */
+.firstpg{
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    /* 0.2rem */
+
+    p{
+        margin: 0;
+    }
+
+}
+
+/* Ex. of flex-wrap 
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 2em;
+  border: 2px dotted rgb(96 139 168);
+}
+  .box > * {
+  flex: 1;
+  padding: 20px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+*/
+
+/* P R O J E T O S */
+.proj{
+    background: rgb(30, 29, 29); 
+    margin-right: 3.7vw; 
+    margin-left: 3.7vw;
+    padding: 0 20px 100px 20px;
+}
+
+.icon{
+    display: inline-block;
+    background: url('./images/w-file-format-document.png') no-repeat top left;
+}
+.icon-accessibility{
+    background-position: 0 0; width: 32px; height: 32px;
+}
+
+section{
+    display: grid;
+    place-items: center start;
+    align-content: center;
+    min-height: 80vh;
+    margin-left: 90px;
+    margin-top: 70px;
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.msflex{
+    display: flex;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,
+      minmax(510px, 1fr));
+    width: 100%;
+    gap: 20px;
+  }
+.i-bg{
+    border-radius: 2%; 
+    margin-top: 40px; 
+    box-shadow: rgba(127, 125, 125, 0.25) 0px 14px 28px, rgba(132, 130, 130, 0.22) 0px 10px 10px;
+}
+
+/* T O O L S   I   U S E */
+.logos{
+    display: grid; 
+    grid-template-columns: repeat(3,25vw);
+    grid-template-rows: repeat(2, 140px);
+    gap: 30px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo:nth-child(2){
+    transition-delay: 800ms;
+}
+.logo:nth-child(3){
+    transition-delay: 600ms;
+}
+.logo:nth-child(4){
+    transition-delay: 400ms;
+}
+.logo:nth-child(5){
+    transition-delay: 200ms;
+}
+
+.toggle{
+    background: #a6a5a5;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 10px 0;
+    position: relative;
+}
+
+input[type=radio]{
+    display: none;
+}
+
+label{
+    width: 150px;
+    display: inline-block;
+    text-align: center;
+    top: -6px;
+    z-index: 5;
+    position: relative;
+    cursor: pointer;
+}
+.seletor{
+    height: 55px;
+    width: 150px;
+    background: rgb(249, 201, 69);
+    border-radius: 30px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: 1;
+    transition: left 0.25s ease-in-out;
+}
+
+.view:checked ~ .seletor{
+    left: 2px;
+}
+
+.more:checked ~ .seletor{
+    left: 156px;
+}
+
+/* Ex. of switch-button
+/* #chk{
+    display: none;
+}
+.switch{
+    position: relative;
+    background-color: #777;
+    width: 120px;
+    height: 60px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.slider{
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: all .5s ease-in-out;
+}
+
+#chk:checked ~ .switch {
+    background-color: blueviolet;
+}
+
+#chk:checked ~ .switch .slider {
+    transform: translateX(60px);
+} */

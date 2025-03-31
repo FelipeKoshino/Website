@@ -194,6 +194,12 @@ section{
     box-shadow: rgba(127, 125, 125, 0.25) 0px 14px 28px, rgba(132, 130, 130, 0.22) 0px 10px 10px;
 }
 
+/* A U T O M A Ç Õ E S */
+.sec-ia{
+    margin-right: 3.7vw; 
+    margin-left: 3.7vw;
+}
+
 /* T O O L S   I   U S E */
 .logos{
     display: grid; 

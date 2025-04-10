@@ -305,11 +305,7 @@ section{
 
 /* T O O L S   I   U S E */
 .logos{
-    display: grid; 
-    grid-template-columns: repeat(3,25vw);
-    grid-template-rows: repeat(3, 140px);
-    column-gap: 30px;
-    row-gap: 20px;
+    display: grid;
 }
 .logo{
     display: flex;

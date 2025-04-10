@@ -12,8 +12,7 @@ body{
 
 nav{
     display: flex;
-    position: fixed;
-    width: 100vw;
+    /*position: fixed;*/
     background-color: rgb(28, 26, 26);
     top: 0;
     left: 0;
@@ -21,9 +20,20 @@ nav{
     border-bottom: 1px solid #ffffff;
 }
 
+.iheight img{
+    margin-left: 10px;
+}
+
 @media (min-width: 1130px) {
+    nav{
+        flex-direction: row;
+        width: 100vw;
+    }
     .menu{
         left: 60vw;
+    }
+    .dimg{
+        margin-left: 7vw;
     }
     .logos{
         font-size: 3rem;
@@ -31,24 +41,58 @@ nav{
     .proj{
         border-radius: 3%;
     }
+    .iheight {
+        width: 290px;
+        height: 290px;
+    }
+    .iheight img{
+        height: 55px;
+    }
+    .tools-line{
+        margin-top: 80px;
+    }
     
 }
 
 @media (min-width:885px) and (max-width: 1129px) {
+    nav{
+        flex-direction: row;
+    }
     .menu{
         left: 48vw;
+    }
+    .dimg{
+        margin-left: 7vw;
     }
     .logos{
         font-size: 30px;
     }
+    .iheight {
+        width: 290px;
+        height: 290px;
+    }
+    .iheight img{
+        height: 55px;
+    }
+    .tools-line{
+        margin-top: 80px;
+    }
 }
 
 @media (max-width: 884px) {
+    .sumir{
+        display: none;
+    }
+    nav{
+        flex-direction: column;
+    }
     .menu{
         left: 36vw;
         font-size: 0.9rem;
     }
     .dimg{
+        margin-left: 27px;
+
         p{
             font-size: 0.8rem;
         }
@@ -59,6 +103,16 @@ nav{
     .proj{
         border-radius: 18px;
     }
+    .iheight{
+        width: 35px;
+        height: 35px;
+    }
+    .iheight img{
+        height: 35px;
+    }
+    .tools-line{
+        margin-top: -60px;
+    }
     
 }
 
@@ -66,12 +120,13 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: start;
-    position: absolute;
+    /*position: absolute;*/
     height: 64px;
     font-family: Poppins;
     font-weight: 300;
     color: rgb(235, 238, 240);
     z-index: 3;
+    margin-left: 30px;
     
   flex-wrap: wrap;
   column-gap: 1.1em;
@@ -98,7 +153,7 @@ nav{
     display: flex;
 /*    flex-direction: row-reverse; */
     align-items: center;
-    padding-left: 7vw;
+    /*padding-left: 7vw;*/
     p{
         font-family: Poppins;
         margin: 18px 0;
@@ -200,12 +255,14 @@ section{
     margin-left: 3.7vw;
 }
 
+
 /* T O O L S   I   U S E */
 .logos{
     display: grid; 
     grid-template-columns: repeat(3,25vw);
-    grid-template-rows: repeat(2, 140px);
-    gap: 30px;
+    grid-template-rows: repeat(3, 140px);
+    column-gap: 30px;
+    row-gap: 20px;
 }
 .logo{
     display: flex;
@@ -224,6 +281,16 @@ section{
 .logo:nth-child(5){
     transition-delay: 200ms;
 }
+
+/*
+.toggle{
+    background: #a6a5a5;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 10px 0;
+    position: relative;
+} */
 
 input[type=radio]{
     display: none;
@@ -249,4 +316,3 @@ label{
     z-index: 1;
     transition: left 0.25s ease-in-out;
 }
-

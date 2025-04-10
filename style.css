@@ -54,6 +54,9 @@ nav{
     #pg-2 p{
         font-size: 2.3rem; 
     }
+    .sumir2{
+        display: none;
+    }
     
 }
 
@@ -82,6 +85,9 @@ nav{
     }
     #pg-2 p{
         font-size: 2.3rem; 
+    }
+    .sumir2{
+        display: none;
     }
 }
 
@@ -125,6 +131,12 @@ nav{
     #pg-2 p{
         font-size: 1.4rem;
         margin-top: 40px; 
+    }
+    .sumir2{
+        display: inherit;
+    }
+    .sumir3{
+        display: none;
     }
     
 }

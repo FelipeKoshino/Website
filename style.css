@@ -57,6 +57,12 @@ nav{
     .sumir2{
         display: none;
     }
+    .logos{
+        grid-template-columns: repeat(3,25vw);
+        grid-template-rows: repeat(3, 140px);
+        row-gap: 20px;
+        column-gap: 30px;
+    }
     
 }
 
@@ -88,6 +94,12 @@ nav{
     }
     .sumir2{
         display: none;
+    }
+    .logos{
+        grid-template-columns: repeat(3,25vw);
+        grid-template-rows: repeat(3, 140px);
+        row-gap: 20px;
+        column-gap: 30px;
     }
 }
 
@@ -137,6 +149,12 @@ nav{
     }
     .sumir3{
         display: none;
+    }
+    .logos{
+        grid-template-columns: repeat(2,25vw);
+        grid-template-rows: repeat(5, 100px);
+        margin-left: 70px;
+        column-gap: 65px;
     }
     
 }

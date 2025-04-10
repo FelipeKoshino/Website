@@ -156,6 +156,10 @@ nav{
         margin-left: 70px;
         column-gap: 65px;
     }
+    .i-bg{
+        width: 340px;
+        height: 340px;
+    }
     
 }
 

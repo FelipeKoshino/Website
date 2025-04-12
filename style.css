@@ -34,7 +34,7 @@ nav {
 
 .menu-2 {
     width: 100%; /* Ocupa toda a largura inicialmente */
-    grid-template-columns: repeat(2, minmax(50px, 1fr));
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
 }
 
 /* Estilos de exemplo para os conteúdos dos menus */

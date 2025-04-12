@@ -8,7 +8,9 @@ body{
     overflow-y: hidden;
 }
 
-#a1 { scroll-margin-bottom: 0; }
+#a1 {
+    scroll-margin-bottom: 0;
+}
 
 .hidden{
     opacity: 0;
@@ -23,7 +25,7 @@ body{
 }
 
 nav {
-    display: flex;
+    display: grid;
     width: 100%;
     background-color: #222121; /* Cor de fundo inicial do menu */
     position: fixed; /* Fixa o menu no topo da tela */
@@ -31,6 +33,10 @@ nav {
     left: 0;
     z-index: 100; /* Garante que o menu fique acima de outros conteúdos */
     transition: background-color 0.3s ease, opacity 0.3s ease; /* Transição suave para a cor de fundo e opacidade */
+
+    grid-template-columns: auto auto;
+    /* grid-gap: 4px; */
+    /*background-color: rgb(83, 143, 123);*/
 }
 
 .menu-1, .menu-2 {
@@ -40,11 +46,14 @@ nav {
 
 .menu-1 {
     width: 100%; /* Ocupa toda a largura inicialmente */
+    top: 12px; 
+    align-items: center;
 }
-
+.sumir-m1{
+    display: none;
+}
 .menu-2 {
     width: 100%; /* Ocupa toda a largura inicialmente */
-    grid-template-columns: repeat(2, minmax(150px, 1fr));
 }
 
 /* Estilos de exemplo para os conteúdos dos menus */
@@ -57,7 +66,6 @@ nav {
 
 .menu-1 a:hover, .menu-2 a:hover {
     background-color: #4e4d4d;
-    opacity: 0.7;
 }
 
 /* Estilo para o menu quando a página é rolada para baixo */
@@ -85,6 +93,28 @@ a:visited {
 
 
 @media (min-width: 1130px) {
+    .i-size-foot{
+        height: 33px;
+    }
+    .i-foot{
+        margin-top: 2rem;
+    }
+    .b-foot{
+        margin-right: 6px;
+    }
+    .f1-div{
+        height: 230px; 
+        background-color: rgb(30, 29, 29);
+    }
+    .f2-div{
+        display: flex; 
+        justify-content: space-around; 
+        padding: 10px;
+    }
+    .f3-div{
+        color: rgb(34, 133, 199); 
+        margin-bottom: -1rem;
+    }
     nav{
         flex-direction: row;
         width: 100vw;
@@ -148,6 +178,28 @@ a:visited {
 }
 
 @media (min-width:885px) and (max-width: 1129px) {
+    .i-size-foot{
+        height: 33px;
+    }
+    .i-foot{
+        margin-top: 2rem;
+    }
+    .b-foot{
+        margin-right: 6px;
+    }
+    .f1-div{
+        height: 230px; 
+        background-color: rgb(30, 29, 29);
+    }
+    .f2-div{
+        display: flex; 
+        justify-content: space-around; 
+        padding: 10px;
+    }
+    .f3-div{
+        color: rgb(34, 133, 199); 
+        margin-bottom: -1rem;
+    }
     nav{
         flex-direction: row;
     }
@@ -209,8 +261,34 @@ a:visited {
 }
 
 @media (max-width: 884px) {
+    .i-size-foot{
+        height: 23px;
+    }
+    .i-foot{
+        margin-top: 2rem;
+    }
+    .b-foot{
+        margin-right: 6px;
+    }
+    .f1-div{
+        height: 230px; 
+        background-color: rgb(30, 29, 29);
+    }
+    .f2-div{
+        display: flex; 
+        justify-content: space-around; 
+        padding: 10px;
+    }
+    .f3-div{
+        color: rgb(34, 133, 199); 
+        margin-bottom: -1rem;
+        font-size: 0.9rem;
+    }
     .sumir{
         display: none;
+    }
+    nav{
+        flex-direction: column;
     }
     .proj{
         border-radius: 18px;
@@ -287,6 +365,7 @@ a:visited {
     p{
         margin: 0;
     }
+
 }
 
 /* S I S T E M A S */
@@ -298,15 +377,10 @@ section{
     margin-top: 70px;
 }
 
-.msflex{
-    display: flex;
-}
-
 .proj{
     background: rgb(30, 29, 29); 
     margin-right: 3.7vw; 
     margin-left: 3.7vw;
-    /*padding: 0 0 100px 10%;*/
     padding: 0 3% 100px 3%;
 }
 
@@ -339,7 +413,7 @@ section{
 }
 
 .auto-img{
-    margin-top: 10px;
+    margin-top: 10px;  /* ?? */
 }
 
 /* T O O L S   I   U S E */

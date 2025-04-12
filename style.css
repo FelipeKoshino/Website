@@ -10,14 +10,44 @@ body{
     scroll-margin-bottom: 0;
 }
 
-nav{
+nav {
     display: flex;
-    /*position: fixed;*/
-    background-color: rgb(28, 26, 26);
+    width: 100%;
+    background-color: #222121; /* Cor de fundo inicial do menu */
+    position: fixed; /* Fixa o menu no topo da tela */
     top: 0;
     left: 0;
-    z-index: 7;
-    border-bottom: 1px solid #ffffff;
+    z-index: 100; /* Garante que o menu fique acima de outros conteúdos */
+    transition: background-color 0.3s ease, opacity 0.3s ease; /* Transição suave para a cor de fundo e opacidade */
+}
+.menu-1, .menu-2 {
+    padding: 10px;
+    text-align: center;
+}
+.menu-1 {
+    width: 100%; /* Ocupa toda a largura inicialmente */
+}
+.menu-2 {
+    width: 100%; /* Ocupa toda a largura inicialmente */
+}
+
+/* Estilos de exemplo para os conteúdos dos menus */
+.menu-1 a, .menu-2 a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #989898;
+}
+.menu-1 a:hover, .menu-2 a:hover {
+    background-color: #4e4d4d;
+}
+
+/* Estilo para o menu quando a página é rolada para baixo */
+.nav-scrolled {
+    background-color: #131316;
+    opacity: 0.7;
+     /* Fundo levemente transparente */
+    /*opacity: 0.4;  Você pode ajustar a cor e a opacidade conforme desejado */
 }
 
 .iheight img{
@@ -28,12 +58,6 @@ nav{
     nav{
         flex-direction: row;
         width: 100vw;
-    }
-    .menu{
-        left: 60vw;
-    }
-    .dimg{
-        margin-left: 7vw;
     }
     .logos{
         font-size: 3rem;
@@ -70,12 +94,6 @@ nav{
     nav{
         flex-direction: row;
     }
-    .menu{
-        left: 48vw;
-    }
-    .dimg{
-        margin-left: 7vw;
-    }
     .logos{
         font-size: 30px;
     }
@@ -109,17 +127,6 @@ nav{
     }
     nav{
         flex-direction: column;
-    }
-    .menu{
-        left: 36vw;
-        font-size: 0.9rem;
-    }
-    .dimg{
-        margin-left: 27px;
-
-        p{
-            font-size: 0.8rem;
-        }
     }
     .logos{
         font-size: 1.6rem;
@@ -161,56 +168,6 @@ nav{
         height: 340px;
     }
     
-}
-
-.menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    /*position: absolute;*/
-    height: 64px;
-    font-family: Poppins;
-    font-weight: 300;
-    color: rgb(235, 238, 240);
-    z-index: 3;
-    margin-left: 30px;
-    
-  flex-wrap: wrap;
-  column-gap: 1.1em;
-
-    p{
-    margin: 18px 0;
-    z-index: 5;
-    }
-
-    p > a:hover{
-        border-bottom: solid #4c4c64;
-        cursor: pointer;
-        letter-spacing: 1px;
-    }
-}
-
-.menu--alt{
-    opacity: 0.7;
-/*    background-color: rgb(54, 48, 48); */
-}
-
-.dimg{
-    top: 12px;
-    display: flex;
-/*    flex-direction: row-reverse; */
-    align-items: center;
-    /*padding-left: 7vw;*/
-    p{
-        font-family: Poppins;
-        margin: 18px 0;
-        z-index: 5;
-        }
-    p > a:hover{
-            border-bottom: solid #4c4c64;
-            cursor: pointer;
-            letter-spacing: 1px;
-    }
 }
 
 .scroll-container{
@@ -332,16 +289,6 @@ section{
 .logo:nth-child(5){
     transition-delay: 200ms;
 }
-
-/*
-.toggle{
-    background: #a6a5a5;
-    border: 1px solid #ccc;
-    border-radius: 30px;
-    display: inline-block;
-    padding: 10px 0;
-    position: relative;
-} */
 
 input[type=radio]{
     display: none;

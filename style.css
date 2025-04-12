@@ -3,7 +3,9 @@ body{
     color: #ffffff;
     padding: 0;
     margin: 0;
+    padding-top: 60px;
     z-index: 200;
+    overflow-y: hidden;
 }
 
 #a1 {
@@ -20,16 +22,30 @@ nav {
     z-index: 100; /* Garante que o menu fique acima de outros conteúdos */
     transition: background-color 0.3s ease, opacity 0.3s ease; /* Transição suave para a cor de fundo e opacidade */
 }
+
 .menu-1, .menu-2 {
     padding: 10px;
     text-align: center;
 }
+
 .menu-1 {
     width: 100%; /* Ocupa toda a largura inicialmente */
 }
+
 .menu-2 {
     width: 100%; /* Ocupa toda a largura inicialmente */
 }
+
+/* Media query para telas menores (tablets e celulares) */
+/*@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .menu-1, .menu-2 {
+        width: 100%;
+    }
+}*/
 
 /* Estilos de exemplo para os conteúdos dos menus */
 .menu-1 a, .menu-2 a {
@@ -38,6 +54,7 @@ nav {
     text-decoration: none;
     color: #989898;
 }
+
 .menu-1 a:hover, .menu-2 a:hover {
     background-color: #4e4d4d;
 }
@@ -50,17 +67,32 @@ nav {
     /*opacity: 0.4;  Você pode ajustar a cor e a opacidade conforme desejado */
 }
 
-.iheight img{
-    margin-left: 10px;
+.scroll-container{
+    width: 100vw;
+    height: 400vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
 
 @media (min-width: 1130px) {
     nav{
         flex-direction: row;
         width: 100vw;
     }
-    .logos{
-        font-size: 3rem;
+    .menu{
+        left: 60vw;
+    }
+    .dimg{
+        margin-left: 7vw;
     }
     .proj{
         border-radius: 3%;
@@ -81,11 +113,41 @@ nav {
     .sumir2{
         display: none;
     }
+    #pg-4{
+        margin-left: 11vw;
+    }
     .logos{
-        grid-template-columns: repeat(3,25vw);
-        grid-template-rows: repeat(3, 140px);
+        font-size: 2.4rem;
+        grid-template-columns: repeat(3,30vw);
+        grid-template-rows: repeat(3, 120px);
         row-gap: 20px;
-        column-gap: 30px;
+        column-gap: auto;
+        margin-left: 0;
+    }
+.sec-ia{
+    margin-right: 3.7vw; 
+    margin-left: 3.7vw;
+}
+    .i-bg{
+        width: 90vw;
+        height: 760px;
+        border-radius: 2%;
+        margin-top: 40px;
+        box-shadow: rgba(127, 125, 125, 0.25) 0px 14px 28px, rgba(132, 130, 130, 0.22) 0px 10px 10px;
+    }
+    .reverso{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+    .auto-img{
+        width: 800px; 
+        height:740px;
+    }
+    .a-title{
+        font-size: 2.7rem; 
+        margin-top: 20px; 
+        margin-bottom: 10px
     }
     
 }
@@ -94,12 +156,16 @@ nav {
     nav{
         flex-direction: row;
     }
-    .logos{
-        font-size: 30px;
+    .menu{
+        left: 48vw;
+    }
+    .dimg{
+        margin-left: 7vw;
     }
     .iheight {
-        width: 290px;
-        height: 290px;
+        width: 240px;
+        height: 240px;
+        font-size: 1.7rem;
     }
     .iheight img{
         height: 55px;
@@ -108,16 +174,48 @@ nav {
         margin-top: 80px;
     }
     #pg-2 p{
-        font-size: 2.3rem; 
+        font-size: 2.3rem;
     }
     .sumir2{
         display: none;
     }
+    .l-title{
+        margin-left: 10%;
+    }
     .logos{
-        grid-template-columns: repeat(3,25vw);
-        grid-template-rows: repeat(3, 140px);
+        font-size: 25px;
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3, 120px);
         row-gap: 20px;
         column-gap: 30px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .sec-ia{
+        margin-right: 3.7vw; 
+        margin-left: 3.7vw;
+    }
+    .i-bg{
+        width: 90vw;
+        height: 460px;
+        
+        border-radius: 2%; 
+        margin-top: 40px; 
+        box-shadow: rgba(127, 125, 125, 0.25) 0px 14px 28px, rgba(132, 130, 130, 0.22) 0px 10px 10px;
+    }
+    .reverso{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+    .auto-img{
+        width: 500px; 
+        height: 430px;
+    }
+    .a-title{
+        font-size: 2.7rem; 
+        margin-top: 20px; 
+        margin-bottom: 10px
     }
 }
 
@@ -128,8 +226,16 @@ nav {
     nav{
         flex-direction: column;
     }
-    .logos{
-        font-size: 1.6rem;
+    .menu{
+        left: 36vw;
+        font-size: 0.9rem;
+    }
+    .dimg{
+        margin-left: 27px;
+
+        p{
+            font-size: 0.8rem;
+        }
     }
     .proj{
         border-radius: 18px;
@@ -152,36 +258,60 @@ nav {
         margin-top: 40px; 
     }
     .sumir2{
-        display: inherit;
+        display:inherit;
     }
     .sumir3{
         display: none;
     }
+    .l-title{
+        margin-left: 4%;
+    }
     .logos{
-        grid-template-columns: repeat(2,25vw);
+        font-size: 1.6rem;
+        grid-template-columns: repeat(2,38vw);
         grid-template-rows: repeat(5, 100px);
-        margin-left: 70px;
-        column-gap: 65px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .i0-bg{
+        width: 360px;
+        height: 360px;
     }
     .i-bg{
-        width: 340px;
-        height: 340px;
+        width: 70vw;
+        height: 470px; 
+        margin-top: 40px; 
+        margin-right: auto;
+        margin-left: auto;
+
+        border-radius: 2%;
+        box-shadow: rgba(127, 125, 125, 0.25) 0px 14px 28px, rgba(132, 130, 130, 0.22) 0px 10px 10px;
+    }
+    .reverso{
+        display: inline-block;
+    }
+    .serv-auto{
+        text-align: center;
+    }
+    .a-title{
+        font-size: 2.7rem; 
+        margin-top: 20px; 
+        margin-bottom: 10px;
+        margin-left: 7vw;
     }
     
 }
 
-.scroll-container{
-    width: 100vw;
-    height: 400vh;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
+/* A U T O M A Ç Õ E S */
+.serv-auto{
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    font-size: 1.1rem;
+    font-family: Poppins;
 }
-a:link {
-    text-decoration: none;
-}
-a:visited {
-    text-decoration: none;
-    color: white;
+
+.auto-img{
+    margin-top: 10px;
 }
 
 
@@ -199,72 +329,46 @@ a:visited {
 }
 
 /* P R O J E T O S */
-.proj{
-    background: rgb(30, 29, 29); 
-    margin-right: 3.7vw; 
-    margin-left: 3.7vw;
-    padding: 0 20px 100px 20px;
-}
-
-.icon{
-    display: inline-block;
-    background: url('./images/w-file-format-document.png') no-repeat top left;
-}
-.icon-accessibility{
-    background-position: 0 0; width: 32px; height: 32px;
-}
-
 section{
     display: grid;
     place-items: center start;
     align-content: center;
     min-height: 80vh;
-    margin-left: 90px;
     margin-top: 70px;
-}
-
-.hidden{
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 1s;
-}
-
-.show{
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
 }
 
 .msflex{
     display: flex;
 }
 
+.proj{
+    background: rgb(30, 29, 29); 
+    margin-right: 3.7vw; 
+    margin-left: 3.7vw;
+    /*padding: 0 0 100px 10%;*/
+    padding: 0 3% 100px 3%;
+}
+
 .centralize{
     text-align: center;
 }
 .grid-container {
-    display: inline-block;
+    display: inline-block; /* Permite que o text-align do body o centralize horizontalmente */
     grid-template-columns: repeat(auto-fill,
       minmax(510px, 1fr));
     width: 100%;
-    gap: 20px;
-  }
-.i-bg{
+    gap: 50px;
+    /* max-width: 1070px;  Largura max p/ o container */
+}
+.i0-bg {
     max-width: 100%;
     height: auto;
     display: inline-block; /* Permite que fiquem na mesma linha (se a largura permitir) e sejam afetadas pelo text-align */
     vertical-align: middle; /* Alinha verticalmente as imagens (útil se houver texto ou outros elementos inline) */
 
     border-radius: 2%; 
-    margin-top: 40px; 
+    margin-top: 60px; 
     box-shadow: rgba(127, 125, 125, 0.25) 0px 14px 28px, rgba(132, 130, 130, 0.22) 0px 10px 10px;
-}
-
-/* A U T O M A Ç Õ E S */
-.sec-ia{
-    margin-right: 3.7vw; 
-    margin-left: 3.7vw;
 }
 
 
@@ -274,7 +378,7 @@ section{
 }
 .logo{
     display: flex;
-    justify-content: center;
+    justify-content:flex-start;
     align-items: center;
 }
 .logo:nth-child(2){
@@ -290,10 +394,10 @@ section{
     transition-delay: 200ms;
 }
 
+
 input[type=radio]{
     display: none;
 }
-
 label{
     width: 150px;
     display: inline-block;

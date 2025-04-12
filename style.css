@@ -36,17 +36,6 @@ nav {
     width: 100%; /* Ocupa toda a largura inicialmente */
 }
 
-/* Media query para telas menores (tablets e celulares) */
-/*@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-
-    .menu-1, .menu-2 {
-        width: 100%;
-    }
-}*/
-
 /* Estilos de exemplo para os conteúdos dos menus */
 .menu-1 a, .menu-2 a {
     display: inline-block;
@@ -57,6 +46,7 @@ nav {
 
 .menu-1 a:hover, .menu-2 a:hover {
     background-color: #4e4d4d;
+    opacity: 0.7;
 }
 
 /* Estilo para o menu quando a página é rolada para baixo */

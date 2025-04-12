@@ -34,6 +34,7 @@ nav {
 
 .menu-2 {
     width: 100%; /* Ocupa toda a largura inicialmente */
+    display: flex;
 }
 
 /* Estilos de exemplo para os conteúdos dos menus */

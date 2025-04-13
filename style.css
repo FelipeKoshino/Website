@@ -179,6 +179,10 @@ nav > div > a{
     .sumir2{
         display: none;
     }
+    .l-title{
+        margin-left: 10%;
+        margin: 100px 0 30px 0;
+    }
     #pg-4{
         margin-left: 11vw;
     }
@@ -280,6 +284,7 @@ nav > div > a{
     }
     .l-title{
         margin-left: 10%;
+        margin: 100px 0 30px 100px;
     }
     .logos{
         font-size: 25px;
@@ -389,6 +394,7 @@ nav > div > a{
     }
     .l-title{
         margin-left: 4%;
+        margin: 100px 0 80px 8vw;
     }
     .logos{
         font-size: 1.6rem;

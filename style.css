@@ -149,8 +149,8 @@ nav > div > a{
         border-radius: 3%;
     }
     .iheight {
-        width: 290px;
-        height: 290px;
+        width: 180px;
+        height: 180px;
     }
     .iheight img{
         height: 55px;
@@ -233,8 +233,8 @@ nav > div > a{
         flex-direction: row;
     }
     .iheight {
-        width: 240px;
-        height: 240px;
+        width: 180px;
+        height: 180px;
         font-size: 1.7rem;
     }
     .iheight img{

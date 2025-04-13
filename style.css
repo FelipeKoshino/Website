@@ -35,7 +35,7 @@ nav {
     transition: background-color 0.3s ease, opacity 0.3s ease; /* Transição suave para a cor de fundo e opacidade */
 }
 nav > div > a{
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-family: Verdana;
 }
 

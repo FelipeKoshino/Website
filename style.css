@@ -449,6 +449,10 @@ section{
     display: flex;
     text-decoration: none;
     color: white;
-    font-size: 1.3rem;
+    font-size: 1rem;
     justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.foot-contact:hover {
+    text-decoration: underline;
 }

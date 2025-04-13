@@ -446,6 +446,9 @@ section{
 
 /* F O O T E R */
 .foot-contact{
+    display: flex;
     text-decoration: none;
     color: aliceblue;
+    font-size: 1.3rem;
+    justify-content: center;
 }

@@ -443,3 +443,9 @@ section{
 .logo:nth-child(5){
     transition-delay: 200ms;
 }
+
+/* F O O T E R */
+.foot-contact{
+    text-decoration: none;
+    color: aliceblue;
+}

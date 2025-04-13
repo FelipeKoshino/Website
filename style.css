@@ -12,6 +12,21 @@ body{
     scroll-margin-bottom: 0;
 }
 
+.scroll-container{
+    width: 100vw;
+    height: 400vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
 .hidden{
     opacity: 0;
     filter: blur(5px);
@@ -24,6 +39,24 @@ body{
     transform: translateX(0);
 }
 
+/* H O M E  -  T E X T */
+.firstpg{
+    margin-top: -110px;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    /* 0.2rem */
+
+    p{
+        margin: 0;
+    }
+
+}
+.home-text{
+    margin-right: 6vw;
+    margin-left: 7vw;
+}
+
+/* T O P  -  M E N U */
 nav {
     display: flex;
     width: 100%;
@@ -65,13 +98,13 @@ nav > div > a{
 /* Estilos de exemplo para os conteúdos dos menus */
 .menu-1 a, .menu-2 a {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 10px 15px;  /* top-bottom ; right-left */
     text-decoration: none;
     color: #989898;
 }
 
 .menu-1 a:hover, .menu-2 a:hover {
-    background-color: #4e4d4d;
+    background-color: #292727;
 }
 
 /* Estilo para o menu quando a página é rolada para baixo */
@@ -82,23 +115,10 @@ nav > div > a{
     /*opacity: 0.4;  Você pode ajustar a cor e a opacidade conforme desejado */
 }
 
-.scroll-container{
-    width: 100vw;
-    height: 400vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-a:link {
-    text-decoration: none;
-}
-a:visited {
-    text-decoration: none;
-    color: white;
-}
-
-
 @media (min-width: 1130px) {
+    .home-text{
+        margin-top: 5vw;
+    }
     .i-size-foot{
         height: 33px;
     }
@@ -184,6 +204,9 @@ a:visited {
 }
 
 @media (min-width:885px) and (max-width: 1129px) {
+    .home-text{
+        margin-top: 5vw;
+    }
     .i-size-foot{
         height: 33px;
     }
@@ -267,6 +290,9 @@ a:visited {
 }
 
 @media (max-width: 884px) {
+    .home-text{
+        margin-top: 35vw;
+    }
     .i-size-foot{
         height: 23px;
     }

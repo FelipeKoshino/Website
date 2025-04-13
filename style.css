@@ -14,7 +14,7 @@ body{
 
 .scroll-container{
     width: 100vw;
-    height: 400vh;
+    height: 150vh;
     overflow-y: scroll;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -41,7 +41,6 @@ a:visited {
 
 /* H O M E  -  T E X T */
 .firstpg{
-    margin-top: -110px;
     font-size: 1.4rem;
     letter-spacing: 1px;
     /* 0.2rem */
@@ -66,6 +65,10 @@ nav {
     left: 0;
     z-index: 100; /* Garante que o menu fique acima de outros conteúdos */
     transition: background-color 0.3s ease, opacity 0.3s ease; /* Transição suave para a cor de fundo e opacidade */
+
+    /* grid-template-columns: auto auto;*/
+    /* grid-gap: 4px;*/
+    /* background-color: rgb(83, 143, 123);*/
 }
 nav > div > a{
     font-size: 1rem;
@@ -115,7 +118,11 @@ nav > div > a{
     /*opacity: 0.4;  Você pode ajustar a cor e a opacidade conforme desejado */
 }
 
+
 @media (min-width: 1130px) {
+    .firstpg{
+        margin-top: 10px;
+    }
     .home-text{
         margin-top: 5vw;
     }
@@ -146,7 +153,11 @@ nav > div > a{
         width: 100vw;
     }
     .proj{
-        border-radius: 3%;
+        border-radius: 25px;
+        margin-top: 30px;
+    }
+    .ss-p2{
+        margin-bottom: 40px;
     }
     .iheight {
         width: 180px;
@@ -159,7 +170,7 @@ nav > div > a{
         margin-top: 80px;
     }
     #pg-2 p{
-        font-size: 2.3rem; 
+        font-size: 2.7rem;
     }
     .sumir2{
         display: none;
@@ -196,7 +207,7 @@ nav > div > a{
         height:740px;
     }
     .a-title{
-        font-size: 2.7rem; 
+        font-size: 2.7rem;
         margin-top: 90px; 
         margin-bottom: 10px
     }
@@ -204,6 +215,9 @@ nav > div > a{
 }
 
 @media (min-width:885px) and (max-width: 1129px) {
+    .firstpg{
+        margin-top: 10px;
+    }
     .home-text{
         margin-top: 5vw;
     }
@@ -217,7 +231,7 @@ nav > div > a{
         margin-right: 6px;
     }
     .f1-div{
-        height: 200px; 
+        height: 210px;
         background-color: rgb(30, 29, 29);
     }
     .f2-div{
@@ -232,6 +246,13 @@ nav > div > a{
     nav{
         flex-direction: row;
     }
+    .proj{
+        border-radius: 25px;
+        margin-top: 30px;
+    }
+    .ss-p2{
+        margin-bottom: -40px;
+    }
     .iheight {
         width: 180px;
         height: 180px;
@@ -244,7 +265,7 @@ nav > div > a{
         margin-top: 80px;
     }
     #pg-2 p{
-        font-size: 2.3rem;
+        font-size: 2.7rem;
     }
     .sumir2{
         display: none;
@@ -283,13 +304,16 @@ nav > div > a{
         height: 430px;
     }
     .a-title{
-        font-size: 2.7rem; 
+        font-size: 2.7rem;
         margin-top: 90px; 
         margin-bottom: 10px
     }
 }
 
 @media (max-width: 884px) {
+    .firstpg{
+        margin-top: 100px;
+    }
     .home-text{
         margin-top: 35vw;
     }
@@ -303,7 +327,7 @@ nav > div > a{
         margin-right: 6px;
     }
     .f1-div{
-        height: 170px;
+        height: 170px; 
         background-color: rgb(30, 29, 29);
     }
     .f2-div{
@@ -325,6 +349,9 @@ nav > div > a{
     .proj{
         border-radius: 18px;
     }
+    .ss-p2{
+        margin-bottom: -40px;
+    }
     .iheight{
         width: 35px;
         height: 35px;
@@ -339,8 +366,9 @@ nav > div > a{
         margin-left: 20px;
     }
     #pg-2 p{
-        font-size: 1.8rem;
-        margin-top: 40px; 
+        font-size: 2.5rem;
+        margin-top: 40px;
+        padding-left: 24px;
     }
     .sumir2{
         display:inherit;
@@ -387,18 +415,6 @@ nav > div > a{
     
 }
 
-/* H O M E */
-.firstpg{
-    margin-top: -110px;
-    font-size: 1.4rem;
-    letter-spacing: 1px;
-    /* 0.2rem */
-
-    p{
-        margin: 0;
-    }
-
-}
 
 /* S I S T E M A S */
 section{
@@ -410,14 +426,21 @@ section{
 }
 
 .proj{
-    background: rgb(30, 29, 29); 
+    background: #131316; 
     margin-right: 3.7vw; 
     margin-left: 3.7vw;
     padding: 0 3% 100px 3%;
 }
 
-.centralize{
+.ss-p1{
+    padding: 60px 0 20px 0; 
+    margin-bottom: -40px;
+}
+
+.centralize{ /* rgb(30, 29, 29) */
+    background-color: rgb(30, 29, 29);
     text-align: center;
+    border-radius: 20px;
 }
 .grid-container {
     display: inline-block; /* Permite que o text-align do body o centralize horizontalmente */

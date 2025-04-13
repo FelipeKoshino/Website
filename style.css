@@ -77,7 +77,7 @@ nav > div > a{
 /* Estilo para o menu quando a página é rolada para baixo */
 .nav-scrolled {
     background-color: #131316;
-    opacity: 0.7;
+    opacity: 0.9;
      /* Fundo levemente transparente */
     /*opacity: 0.4;  Você pode ajustar a cor e a opacidade conforme desejado */
 }

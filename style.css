@@ -152,12 +152,19 @@ nav > div > a{
         flex-direction: row;
         width: 100vw;
     }
+    .ss-margin{
+        margin-bottom: 100px;
+    }
+    #pg-2 p{
+        font-size: 2.7rem;
+    }
     .proj{
         border-radius: 25px;
         margin-top: 30px;
     }
     .ss-p2{
         margin-bottom: 40px;
+        margin-left: 40px;
     }
     .iheight {
         width: 180px;
@@ -168,9 +175,6 @@ nav > div > a{
     }
     .tools-line{
         margin-top: 80px;
-    }
-    #pg-2 p{
-        font-size: 2.7rem;
     }
     .sumir2{
         display: none;
@@ -246,12 +250,19 @@ nav > div > a{
     nav{
         flex-direction: row;
     }
+    .ss-margin{
+        margin-bottom: 100px;
+    }
+    #pg-2 p{
+        font-size: 2.7rem;
+    }
     .proj{
         border-radius: 25px;
         margin-top: 30px;
     }
     .ss-p2{
         margin-bottom: -40px;
+        margin-left: 40px;
     }
     .iheight {
         width: 180px;
@@ -263,9 +274,6 @@ nav > div > a{
     }
     .tools-line{
         margin-top: 80px;
-    }
-    #pg-2 p{
-        font-size: 2.7rem;
     }
     .sumir2{
         display: none;
@@ -346,11 +354,19 @@ nav > div > a{
     nav{
         flex-direction: column;
     }
+    #pg-2 p{
+        margin-top: 40px;
+        padding-left: 24px;
+    }
     .proj{
         border-radius: 18px;
     }
     .ss-p2{
-        margin-bottom: -40px;
+        font-size: 1.9rem;
+        margin-left: 25px;
+    }
+    .ss-p1{
+        font-size: 2.7rem;
     }
     .iheight{
         width: 35px;
@@ -364,11 +380,6 @@ nav > div > a{
     }
     #pg-5{
         margin-left: 20px;
-    }
-    #pg-2 p{
-        font-size: 2.5rem;
-        margin-top: 40px;
-        padding-left: 24px;
     }
     .sumir2{
         display:inherit;

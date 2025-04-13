@@ -33,29 +33,33 @@ nav {
     left: 0;
     z-index: 100; /* Garante que o menu fique acima de outros conteúdos */
     transition: background-color 0.3s ease, opacity 0.3s ease; /* Transição suave para a cor de fundo e opacidade */
-
-    grid-template-columns: auto auto;
-    /* grid-gap: 4px; */
-    /*background-color: rgb(83, 143, 123);*/
+}
+nav > div > a{
+    font-size: 0.9rem;
+    font-family: Verdana;
 }
 
-.menu-1, .menu-2 {
+.menu-1{
     text-align: center;
+    width: 100%;
+    margin-bottom: -10px;
 }
-
 .menu-1 img{
     border-radius: 50%;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: -20px;
-    align-items: center;
+}
+
+.im1{
+    padding: 10px 0 10px 0;
+    margin-bottom: -26px;
 }
 .sumir-m1{
     display: none;
 }
 .menu-2 {
-    padding: 10px;
+    text-align: center;
     width: 100%; /* Ocupa toda a largura inicialmente */
+    padding: 10px 10px 0 10px;
+    margin-bottom: 10px;
 }
 
 /* Estilos de exemplo para os conteúdos dos menus */

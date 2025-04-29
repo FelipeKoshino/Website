@@ -423,7 +423,7 @@ nav > div > a{
         height: 360px;
     }
     .i-bg{
-        width: 70vw;
+        width: 88vw;
         height: 810px;
         margin-top: -150px;
         margin-right: auto;
@@ -552,7 +552,8 @@ section{
     text-decoration: underline;
 }
 
-/* WhatsApp SmartPhone */
+
+/* WhatsApp SmartPhone - AUTOMAÇÕES */ 
 .bg-contain {
     width: 300px;
     height: 200px;

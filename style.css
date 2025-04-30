@@ -562,6 +562,20 @@ section{
     background-position: center;
     background-repeat: repeat-y;
 }
+.whats-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    background-color: #749787;
+}
+.top-top{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: rgb(27, 27, 27);
+}
 .cell-top{
     position: relative;
     display: flex;
@@ -569,7 +583,7 @@ section{
     width: 60%;
     height: 100%;
     margin-left: 52px;
-    margin-top: -63%;
+    margin-top: -69%; /*63%*/
     background-color: #222121;
     text-align: center;
     border-radius: 15px;
@@ -579,10 +593,10 @@ section{
     justify-content: center;
     position: absolute;
     text-align: center;
-    width: 86%;
-    margin-left: 16px;
+    width: 94%;
+    margin-left: 7px;
     height: 40px;
-    margin-top: 152%;
+    margin-top: 144%; /*137*/
     background-color: #222121;
     opacity: 0.6;
     border-radius: 30px;

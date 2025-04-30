@@ -205,7 +205,7 @@ nav > div > a{
 }
     .i-bg{
         width: 90vw;
-        height: 460px;
+        height: 420px;
         border-radius: 2%;
         margin-top: 40px;
         box-shadow: rgba(127, 125, 125, 0.25) 0px 14px 28px, rgba(132, 130, 130, 0.22) 0px 10px 10px;
@@ -597,7 +597,7 @@ section{
     padding: 5px;
     background-color: var(--bg);
     border-radius: 35px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    box-shadow: rgba(103, 103, 109, 0.25) 0px 50px 100px -20px, rgba(92, 86, 86, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   }
   
   .card-inner {
@@ -613,6 +613,10 @@ section{
     border-radius: 30px;
     font-family: system-ui;
   }
+
+.msg-botlogo{
+    border-radius: 30px;
+}
 
   /*.card-overlay {
     width: 100%;
@@ -638,6 +642,9 @@ section{
   
   .mensagem {
     position: absolute;
+    display: flex; 
+    justify-content: space-between;
+
     transform: translateX(-50%); /* Ajuste para centralização horizontal */
     opacity: 0;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, top 0.5s ease-in-out; /* Adicionamos transição para o 'top' */
@@ -646,19 +653,23 @@ section{
     padding: 10px 15px;
     border-radius: 10px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
-    height: 11%;
-    width: 86%;
-    margin-top: 30px;
+    margin-top: 50px;
+    text-align: justify;
   }
   
   .esquerda {
+    width: 86%;
+    height: 16%;
     background-color: #6da046;
+    align-content: start;
+    font-size: 0.9rem;
   }
   
   .direita {
+    width: 79%;
+    height: 9%;
     left: auto; /* Override do 'left: 50%' */
     background-color: #95ab86;
-    font-size: 1.1rem;
   }
   
   .mensagem.visivel {

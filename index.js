@@ -66,13 +66,15 @@ document.addEventListener('scroll', function() {
 
 window.addEventListener('scroll', function() {
     const nav = document.getElementById('mainNav');
-    if (window.scrollY > 50) { // Ajuste este valor conforme necessário (a distância para ativar a transparência)
-        nav.classList.add('nav-scrolled');
-        menu.classList.add("sumir-m1")
-
-    } else {
-        nav.classList.remove('nav-scrolled');
-        menu.classList.remove("sumir-m1")
+    if(nav){
+      if (window.scrollY > 50) { // Ajuste este valor conforme necessário (a distância para ativar a transparência)
+          nav.classList.add('nav-scrolled');
+          menu.classList.add("sumir-m1")
+  
+      } else {
+          nav.classList.remove('nav-scrolled');
+          menu.classList.remove("sumir-m1")
+      }
     }
     
 });

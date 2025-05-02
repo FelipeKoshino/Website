@@ -12,6 +12,62 @@ body{
     scroll-margin-bottom: 0;
 }
 
+#myForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    position: relative;
+}
+
+.form-field{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48vw;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px 0 10px 0;
+    border-radius: 20px;
+
+    input{
+        width: 60%;
+        height: 40px;
+        text-align: center;
+        font-size: 1.1rem;
+        border-radius: 20px;
+        background-color: #131316; /* Cor de fundo inicial do menu */
+        color: white;
+        border: solid 1px #2d2d35;
+        padding-left: 10px;
+        box-shadow: rgba(127, 125, 125, 0.25) 0px 14px 28px, rgba(132, 130, 130, 0.22) 0px 10px 10px;
+    }
+}
+.select-field{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px 0 10px 0;
+    border-radius: 10px;
+
+    select{
+        width: 40%;
+        height: 40px;
+        border-radius: 20px;
+        background-color: #131316; /* Cor de fundo inicial do menu */
+        color: white;
+        border: solid 1px #2d2d35;
+        padding-left: 10px;
+        box-shadow: rgba(127, 125, 125, 0.25) 0px 14px 28px, rgba(132, 130, 130, 0.22) 0px 10px 10px;
+    }
+}
+
 .scroll-container{
     width: 100vw;
     height: 100vh;

@@ -82,7 +82,7 @@ document.getElementById('myForm').addEventListener('submit', async function(even
   event.preventDefault();
   const formData = new FormData(this);
   const data = Object.fromEntries(formData.entries());
-  const webhookUrl = 'https://n8n.srv792540.hstgr.cloud/webhook/2b676df2-4e49-49d7-9817-8c8a09292a2a'
+  const webhookUrl = 'https://n8n.srv792540.hstgr.cloud/webhook/2b676df2-4e49-49d7-9817-8c8a09292a2a';
 
   try {
       const response = await fetch(webhookUrl, {
@@ -95,7 +95,7 @@ document.getElementById('myForm').addEventListener('submit', async function(even
       });
 
       if (response.ok) {
-          alert('Form submitted successfully!');
+          alert(`Perfeito ${data['field1']}, dentro de 48h entrarei em contato via E-mail ou Telefone em horário comercial.`);
       } else {
           alert('Failed to submit the form.');
       }

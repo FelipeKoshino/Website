@@ -421,7 +421,7 @@ nav > div > a{
         font-size: 1.3rem;
     }
     .form-field{
-        width: 100vw;
+        width: 120vw;
         input{
             font-size: 1rem;
         };
@@ -430,7 +430,7 @@ nav > div > a{
         font-size: 1.1rem;
     }
     .select-field{
-        width: 64vw;
+        width: 75vw;
         select{
             font-size: 1rem;
         };

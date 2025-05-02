@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body style="overflow-y: visible; text-align: center; font-family: Verdana; font-size: 1.2rem; background-color: #262629;">
+
+    <h1>Form Page</h1>
+    <form id="myForm">
+        <div class="form-field">
+            <label for="field1">Nome:</label>
+            <input type="text" id="field1" name="field1" required>
+            <br><br>
+        </div>
+
+        <div class="form-field">
+            <label for="field2">Endereço de e-mail:</label>
+            <input type="email" id="field2" name="field2" required>
+            <br><br>
+        </div>
+
+        <div class="form-field">
+            <label for="field6">(Opcional) Telefone com DDD:</label>
+            <input type="tel" id="field3" name="field3" required pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}">
+            <br><br> <!-- "[0-9]{2}-[0-9]{4}-[0-9]{4}" -->
+        </div>
+
+        <label for="field4">Selecione aqui o que deseja automatizar:</label>
+        <select class="select-field" id="field4" name="field4" required>
+            <option value="Option 1">Atendimento </option>
+            <option value="Option 2">Redes Sociais </option>
+            <option value="Option 3">Envio de Promoções/Cupons </option>
+            <option value="Option 4">Pesquisa de Satisfação </option>
+            <option value="Option 5">Controle de Estoque </option>
+            <option value="Option 6">Agendamentos</option>
+            <option value="Option 7">Controle Financeiro</option>
+            <option value="Option 8">Operacional da Empresa</option>
+        </select>
+        <br><br>
+
+        <label for="field5">Qual o setor que sua empresa trabalha?</label>
+        <select class="select-field" id="field5" name="field5" required>
+            <option value="Option 10">Coworking</option>
+            <option value="Option 11">Imobiliária</option>
+            <option value="Option 12">Concessionária</option>
+            <option value="Option 13">Loja</option>
+            <option value="Option 14">Restaurante/Bar</option>
+            <option value="Option 15">Farmácia</option>
+            <option value="Option 16">Escola/Faculdade</option>
+            <option value="Option 17">Clínica</option>
+            <option value="Option 17">Laboratório</option>
+            <option value="Option 17">Indústria</option>
+            <option value="Option 17">Academia</option>
+            <option value="Option 17">Escritório de Advocacia</option>
+            <option value="Option 17">Pecuária</option>
+            <option value="Option 17">Agronomia</option>
+            <option value="Option 17">Reforma</option>
+            <option value="Option 17">Consultório</option>
+            <option value="Option 17">Oficina Mecânica</option>
+            <option value="Option 17">OUTROS..</option>
+        </select>
+        <br><br>
+
+        <button type="submit" style="width: 100px; height: 36px;">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            const webhookUrl = 'https://n8n.srv792540.hstgr.cloud/webhook-test/2b676df2-4e49-49d7-9817-8c8a09292a2a'
+
+            try {
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'bearer': 'd3v0lt44c4b4n4'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    alert('Form submitted successfully!');
+                } else {
+                    alert('Failed to submit the form.');
+                }
+            } catch (error) {
+                alert('An error occurred: ' + error.message);
+            }
+        });
+    </script>
+
+    <!--<footer>
+        <p style="color: #fff; font-size: 0.8rem;">&copy; 2025 AsutecWeb. All rights reserved.</p>
+        <p style="color: #fff; font-size: 0.8rem;">Developed by Felipe K.</p>
+        <p style="color: #fff; font-size: 0.8rem;">Contact me here.</p>
+    </footer>-->
+    <footer style="font-size: 1.6rem;">
+        <!-- text-decoration-line: overline; -->
+         <!-- .line { border-bottom: 1px solid #888; } -->
+        <div class="f1-div">
+            <hr>
+            <div class="f2-div">
+                <div>
+                    <p class="f3-div">Londrina</p>
+                    <p>Paraná</p>
+                </div>
+                <div style="display: flex; flex-direction: column;">
+                    <p class="f3-div">&copy; 2025 
+                        <span style="font-size: 3.6rem;">.</span> Felipe K.
+                    </p>
+                    <p>
+                        <a class="foot-contact" href="https://wa.me/5543988684316" target="_blank">Entre em contato</a>
+                    </p>
+                </div>
+
+                <!-- <p>Termos & Condições <br> 2025</p> -->
+                 <div>
+                    <img class="i-foot b-foot i-size-foot" src="./images/linkedin-ww-icon.png">
+                    <button class="b-foot" style="background: none; border: none;"><img class="i-size-foot" src="./images/github-white.png"></button>
+                    <img class="i-foot i-size-foot" src="./images/instagram-w-icon.png">
+                 </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

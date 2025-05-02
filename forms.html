@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Page</title>
     <link rel="stylesheet" href="./style.css">
+    <script defer src="./index.js"></script>
 </head>
 <body style="overflow-y: visible; text-align: center; font-family: Verdana; font-size: 1.2rem; background-color: #262629;">
 
@@ -66,34 +67,6 @@
 
         <button type="submit" style="width: 100px; height: 36px;">Submit</button>
     </form>
-
-    <script>
-        document.getElementById('myForm').addEventListener('submit', async function(event) {
-            event.preventDefault();
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData.entries());
-            const webhookUrl = 'https://n8n.srv792540.hstgr.cloud/webhook/2b676df2-4e49-49d7-9817-8c8a09292a2a'
-
-            try {
-                const response = await fetch(webhookUrl, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'bearer': 'd3v0lt44c4b4n4'
-                    },
-                    body: JSON.stringify(data)
-                });
-
-                if (response.ok) {
-                    alert('Form submitted successfully!');
-                } else {
-                    alert('Failed to submit the form.');
-                }
-            } catch (error) {
-                alert('An error occurred: ' + error.message);
-            }
-        });
-    </script>
 
     <footer style="font-size: 1.6rem;">
         <div class="f1-div">

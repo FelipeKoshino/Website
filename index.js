@@ -76,3 +76,30 @@ window.addEventListener('scroll', function() {
     }
     
 });
+
+
+document.getElementById('myForm').addEventListener('submit', async function(event) {
+  event.preventDefault();
+  const formData = new FormData(this);
+  const data = Object.fromEntries(formData.entries());
+  const webhookUrl = 'https://n8n.srv792540.hstgr.cloud/webhook/2b676df2-4e49-49d7-9817-8c8a09292a2a'
+
+  try {
+      const response = await fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+              'bearer': 'd3v0lt44c4b4n4'
+          },
+          body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+          alert('Form submitted successfully!');
+      } else {
+          alert('Failed to submit the form.');
+      }
+  } catch (error) {
+      alert('An error occurred: ' + error.message);
+  }
+});

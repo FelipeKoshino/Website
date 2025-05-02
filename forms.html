@@ -9,7 +9,11 @@
 </head>
 <body style="overflow-y: visible; text-align: center; font-family: Verdana; font-size: 1.2rem; background-color: #262629;">
 
-    <h1>Formulário de Pré-Atendimento</h1>
+<div style="font-size: 0.9rem; position: absolute; left: 0; top: 0; margin: 20px;">
+    <a href="./index.html">Home page</a>
+</div>
+
+    <h1>Formulário de Pré-Atendimento</h1> <!-- Formulário de envio | Preencha o Formulário -->
     <form id="myForm">
         <div class="form-field">
             <label for="field1">Nome:</label>
@@ -24,8 +28,9 @@
         </div>
 
         <div class="form-field">
-            <label for="field6">(Opcional) Telefone com DDD [padrão: 00-0000-0000]:</label>
+            <label for="field6">(Opcional) Telefone com DDD:</label>
             <input type="tel" id="field3" name="field3" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}">
+            <p style="margin-top: 0; font-size: 0.8rem;">padrão: 00-0000-0000</p>
             <br><br>
         </div>
 

@@ -26,7 +26,6 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 48vw;
     margin-top: 10px;
     margin-bottom: 20px;
     padding: 10px 0 10px 0;
@@ -36,7 +35,6 @@ body{
         width: 60%;
         height: 40px;
         text-align: center;
-        font-size: 1.1rem;
         border-radius: 20px;
         background-color: #131316; /* Cor de fundo inicial do menu */
         color: white;
@@ -50,7 +48,6 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 20vw;
     margin-top: 10px;
     margin-bottom: 20px;
     padding: 10px 0 10px 0;
@@ -180,6 +177,18 @@ nav > div > a{
 
 
 @media (min-width: 1130px) {
+    .form-field{
+        width: 56vw;
+        input{
+            font-size: 1.1rem;
+        };
+    }
+    .select-field{
+        width: 34vw;
+        select{
+            font-size: 1.2rem;
+        };
+    }
     .firstpg{
         margin-top: 10px;
     }
@@ -289,6 +298,18 @@ nav > div > a{
 }
 
 @media (min-width:885px) and (max-width: 1129px) {
+    .form-field{
+        width: 72vw;
+        input{
+            font-size: 1.1rem;
+        };
+    }
+    .select-field{
+        width: 44vw;
+        select{
+            font-size: 1.1rem;
+        };
+    }
     .firstpg{
         margin-top: 10px;
     }
@@ -396,6 +417,24 @@ nav > div > a{
 }
 
 @media (max-width: 884px) {
+    h1{
+        font-size: 1.3rem;
+    }
+    .form-field{
+        width: 100vw;
+        input{
+            font-size: 1rem;
+        };
+    }
+    label {
+        font-size: 1.1rem;
+    }
+    .select-field{
+        width: 64vw;
+        select{
+            font-size: 1rem;
+        };
+    }
     .firstpg{
         margin-top: 100px;
     }

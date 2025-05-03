@@ -83,25 +83,28 @@ window.addEventListener('scroll', function() {
 document.getElementById('myForm').addEventListener('submit', async function(event) {
   event.preventDefault();
   const formData = new FormData(this);
-  const data = Object.fromEntries(formData.entries());
+  const dataa = Object.fromEntries(formData.entries());
   const webhookUrl = 'https://n8n.srv792540.hstgr.cloud/webhook/2b676df2-4e49-49d7-9817-8c8a09292a2a';
 
-  try {
       const response = await fetch(webhookUrl, {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
               'bearer': 'd3v0lt44c4b4n4'
           },
-          body: JSON.stringify(data)
+          body: JSON.stringify(dataa)
+
+      }).then(async response => {
+        return response.text(); // Webhook Response gives 200 or 400
+        
+      })
+      .then(data => {
+        console.log('Sucesso, dados enviados(não necessariamente registrados).',);
+        alert(data); // Exibe mensagem de sucesso ou erro
+      })
+      .catch(error => {
+        console.error('Erro na requisição:', error);
+        alert('Ocorreu um erro ao enviar os dados.'); // Mensagem genérica de erro de rede ou falha inesperada
       });
 
-      if (response.ok) {
-          alert(`Perfeito ${data['field1']}, dentro de 48h entrarei em contato via E-mail ou Telefone em horário comercial.`);
-      } else {
-          alert('Failed to submit the form.');
-      }
-  } catch (error) {
-      alert('An error occurred: ' + error.message);
-  }
 });

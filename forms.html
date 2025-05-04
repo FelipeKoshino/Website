@@ -6,35 +6,39 @@
     <title>Form Page</title>
     <link rel="stylesheet" href="./style.css">
     <script defer src="./index.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 <body style="overflow-y: visible; text-align: center; font-family: Verdana; font-size: 1.2rem; background-color: #262629;">
 
-<div style="font-size: 0.9rem; position: absolute; left: 0; top: 0; margin: 20px; font-weight: bold;">
+<div style="font-size: 0.9rem; position: absolute; left: 0; top: 0; margin: 20px;">
     <a href="./index.html" style="text-decoration: none; color: white;">Home page</a>
 </div>
 
-    <h1>Formulário de Pré-Atendimento</h1> <!-- Formulário de envio | Preencha o Formulário -->
+    <h1 style="font-size: 2.8rem; margin-top: -28px;">Formulário de <br> Pré-Atendimento</h1> <!-- Formulário de envio | Preencha o Formulário -->
     <form id="myForm">
-        <div class="form-field">
-            <label for="field1">Nome:</label>
+        <div class="input-field form-field">
             <input type="text" id="field1" name="field1" required>
+            <label for="field1" style="font-size: 1.1rem; color: aliceblue;">Nome:</label>
             <br><br>
         </div>
 
-        <div class="form-field">
-            <label for="field2">Endereço de e-mail:</label>
+        <div class="input-field form-field">
             <input type="email" id="field2" name="field2" required>
+            <label for="field2"  style="font-size: 1.1rem; color: aliceblue;">Endereço de e-mail:</label>
             <br><br>
         </div>
 
-        <div class="form-field">
-            <label for="field6">(Opcional) Telefone com DDD:</label>
-            <input type="tel" id="field3" name="field3"> <!-- pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" -->
-            <p style="margin-top: 0; font-size: 0.8rem;">padrão: 00-0000-0000</p>
-            <br><br>
+        <div class="input-field form-field">
+            <input type="tel" id="field3" name="field3"> <!-- placeholder="00-0000-0000" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" -->
+            <label for="field6"  style="font-size: 1.1rem; color: aliceblue;">Telefone com DDD (Opcional):</label>
+            <br>
         </div>
+        <p style="margin-top: -28px; margin-bottom: 40px; font-size: 0.8rem; color: rgb(124, 123, 123);">padrão: 00-0000-0000</p>
 
-        <label for="field4">Selecione aqui o que deseja automatizar:</label>
+
+        <label for="field4" style="font-size: 1rem; color: aliceblue;">Selecione aqui o que deseja automatizar:</label>
         <select class="select-field" id="field4" name="field4" required>
             <option value="Atendimento">Atendimento </option>
             <option value="Redes">Redes Sociais </option>
@@ -47,7 +51,7 @@
         </select>
         <br><br>
 
-        <label for="field5">Qual o setor que sua empresa trabalha?</label>
+        <label for="field5" style="font-size: 1rem; color: aliceblue;">Qual o setor que sua empresa trabalha?</label>
         <select class="select-field" id="field5" name="field5" required>
             <option value="Coworking">Coworking</option>
             <option value="Imobiliária">Imobiliária</option>
@@ -70,7 +74,10 @@
         </select>
         <br><br>
 
-        <button type="submit" style="width: 100px; height: 36px; font-weight: bold;">Submit</button>
+        <button onclick='showToast("left", "warning")' class="btn waves-effect waves-light" type="submit" style="width: 100px; height: 36px; font-weight: bold; margin-top: 20px; margin-bottom: 40px;">Submit
+            <!-- onclick="M.toast({html:'Botão pressionado.'})" name="action">Submit <i class="material-icons right">send</i>-->
+        </button>
+        <div id="toast"></div>
     </form>
 
     <footer style="font-size: 1.6rem;">

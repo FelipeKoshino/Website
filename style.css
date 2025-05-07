@@ -482,7 +482,12 @@ main#carousel {
     height: 370px;
 }
 input{
-    margin-top: 10px;
+    margin-top: 12px;
+}
+input[type="radio"] {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+    transform: scale(1.5);
 }
 
 h1{
